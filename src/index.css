@@ -1,0 +1,54 @@
+:root {
+  --osfiir-blue: #2C55A5;
+  --osfiir-blue-nav: #3258A6;
+  --osfiir-blue-light: #6F91D2;
+  --osfiir-navy: #0B1536;
+  --osfiir-orange: #F58A1F;
+  --osfiir-green: #249E48;
+  --osfiir-dark: #464646;
+  --osfiir-text: #55585E;
+  --osfiir-bg: #FFFFFF;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--osfiir-text);
+  background-color: var(--osfiir-bg);
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
