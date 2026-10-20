@@ -1,5 +1,6 @@
 import React from 'react';
-import logoSvg from '../assets/logo.svg';
+import logoSvg from '../../assets/imgs/logo.svg';
+import './OsfiirLogo.scss';
 
 export default function OsfiirLogo({ size = 'md', className = '' }) {
   const isLarge = size === 'lg';

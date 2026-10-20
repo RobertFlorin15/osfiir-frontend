@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { BOARD_MEMBERS } from '../data/demoData';
+import { BOARD_MEMBERS } from '../../utils/demoData';
+import './BoardCarousel.scss';
 
 export default function BoardCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -122,7 +123,6 @@ export default function BoardCarousel() {
           })}
         </div>
 
-        
         <button
           type="button"
           className="board-carousel__arrow board-carousel__arrow--right"

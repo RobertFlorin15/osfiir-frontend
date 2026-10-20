@@ -1,0 +1,106 @@
+/* ==========================================================================
+   DEPARTMENT QUIZ PAGE (/afla-departamentul)
+   ========================================================================== */
+.quiz-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 28px;
+  border: 2.5px solid var(--osfiir-blue);
+  padding: 38px 42px;
+}
+
+.quiz-card__progress {
+  display: inline-block;
+  background: rgba(245, 138, 31, 0.15);
+  color: var(--osfiir-orange);
+  font-weight: 800;
+  font-size: 0.82rem;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.quiz-card__question {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #2E3138;
+  margin-bottom: 24px;
+}
+
+.quiz-card__options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quiz-option-btn {
+  text-align: left;
+  padding: 15px 22px;
+  border-radius: 16px;
+  border: 2px solid #E2E8F0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #3B3F46;
+  transition: all 0.2s ease;
+}
+
+.quiz-option-btn:hover {
+  border-color: var(--osfiir-orange);
+  background: rgba(245, 138, 31, 0.06);
+  transform: translateX(4px);
+}
+
+.quiz-result {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.quiz-result__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(36, 158, 72, 0.12);
+  color: var(--osfiir-green);
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  border-radius: 999px;
+}
+
+.quiz-result__title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--osfiir-orange);
+}
+
+.quiz-result__sub {
+  font-weight: 700;
+  color: var(--osfiir-blue);
+}
+
+.quiz-result__desc {
+  max-width: 520px;
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+  .quiz-card {
+    padding: 24px 18px;
+    border-radius: 22px;
+  }
+
+  .quiz-card__question {
+    font-size: 1.15rem;
+    margin-bottom: 18px;
+  }
+
+  .quiz-option-btn {
+    padding: 13px 16px;
+    font-size: 0.88rem;
+  }
+}

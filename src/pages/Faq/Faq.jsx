@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import MessageSection from '../components/MessageSection';
-import { FAQ_ITEMS } from '../data/demoData';
+import MessageSection from '../../components/MessageSection/MessageSection';
+import { FAQ_ITEMS } from '../../utils/demoData';
+import './Faq.scss';
 
-export default function FaqPage() {
+export default function Faq() {
   const [openIdx, setOpenIdx] = useState(0);
 
   return (

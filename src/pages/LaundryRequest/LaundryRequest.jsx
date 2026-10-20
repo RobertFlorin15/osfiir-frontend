@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { CheckCircle2 } from 'lucide-react';
-import MessageSection from '../components/MessageSection';
+import MessageSection from '../../components/MessageSection/MessageSection';
+import './LaundryRequest.scss';
 
-export default function LaundryRequestPage() {
+export default function LaundryRequest() {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',

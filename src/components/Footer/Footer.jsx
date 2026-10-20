@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, ArrowUp } from 'lucide-react';
-import OsfiirLogo from './OsfiirLogo';
+import OsfiirLogo from '../OsfiirLogo/OsfiirLogo';
+import './Footer.scss';
 
 export default function Footer() {
   const scrollToTop = () => {

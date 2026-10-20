@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Check, Volume2, ChevronLeft, ChevronRight } from 'lucide-react';
-import { HOME_DEPARTMENTS } from '../data/demoData';
+import { HOME_DEPARTMENTS } from '../../utils/demoData';
+import './DepartmentsCarousel.scss';
 
 export default function DepartmentsCarousel({ departments = HOME_DEPARTMENTS, interval = 6000 }) {
   const [index, setIndex] = useState(0);

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Send, CheckCircle2 } from 'lucide-react';
+import './Contact.scss';
 
-export default function ContactPage() {
+export default function Contact() {
   const [sent, setSent] = useState(false);
 
   const handleSubmit = (e) => {

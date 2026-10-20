@@ -1,8 +1,9 @@
 import React from 'react';
 import { Cpu, Cog, Award } from 'lucide-react';
-import MessageSection from '../components/MessageSection';
+import MessageSection from '../../components/MessageSection/MessageSection';
+import './Faculty.scss';
 
-export default function FacultyPage() {
+export default function Faculty() {
   const specs = [
     {
       title: 'Robotică și Automatizări',

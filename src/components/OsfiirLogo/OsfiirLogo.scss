@@ -1,0 +1,18 @@
+.osfiir-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  line-height: 1;
+
+  &__img {
+    height: 42px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+  }
+
+  &--lg &__img {
+    height: 92px;
+  }
+}

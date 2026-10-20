@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
-import AboutUsPage from './pages/AboutUsPage';
-import FacultyPage from './pages/FacultyPage';
-import EventsPage from './pages/EventsPage';
-import DepartmentQuizPage from './pages/DepartmentQuizPage';
-import LaundryRequestPage from './pages/LaundryRequestPage';
-import FaqPage from './pages/FaqPage';
-import ContactPage from './pages/ContactPage';
-import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import Home from './pages/Home/Home';
+import AboutUs from './pages/AboutUs/AboutUs';
+import Faculty from './pages/Faculty/Faculty';
+import Events from './pages/Events/Events';
+import DepartmentQuiz from './pages/DepartmentQuiz/DepartmentQuiz';
+import LaundryRequest from './pages/LaundryRequest/LaundryRequest';
+import Faq from './pages/Faq/Faq';
+import Contact from './pages/Contact/Contact';
+import './App.scss';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -28,14 +28,14 @@ export default function App() {
         <Navbar />
         <main className="app-main">
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/despre-noi" element={<AboutUsPage />} />
-            <Route path="/despre-facultate" element={<FacultyPage />} />
-            <Route path="/evenimente" element={<EventsPage />} />
-            <Route path="/afla-departamentul" element={<DepartmentQuizPage />} />
-            <Route path="/cerere-spalatorie" element={<LaundryRequestPage />} />
-            <Route path="/faq" element={<FaqPage />} />
-            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/despre-noi" element={<AboutUs />} />
+            <Route path="/despre-facultate" element={<Faculty />} />
+            <Route path="/evenimente" element={<Events />} />
+            <Route path="/afla-departamentul" element={<DepartmentQuiz />} />
+            <Route path="/cerere-spalatorie" element={<LaundryRequest />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
         <Footer />

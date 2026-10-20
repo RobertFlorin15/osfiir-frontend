@@ -1,0 +1,105 @@
+/* ==========================================================================
+   ABOUT US PAGE (/despre-noi)
+   ========================================================================== */
+.about-pillars {
+  padding: 52px 0 56px;
+}
+
+.about-pillars__container {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.pillar-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.25s ease;
+}
+
+.pillar-card--orange {
+  border: 2.5px solid var(--osfiir-orange);
+}
+
+.pillar-card--blue {
+  border: 2.5px solid var(--osfiir-blue);
+}
+
+.pillar-card--green {
+  border: 2.5px solid var(--osfiir-green);
+}
+
+.pillar-card--elevated {
+  transform: translateY(-20px);
+}
+
+.pillar-card__title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #5E6168;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.pillar-card__title--underlined::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--osfiir-blue);
+  margin-top: 4px;
+  border-radius: 2px;
+}
+
+.pillar-card__icon {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 105px;
+}
+
+.pillar-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #55585E;
+  line-height: 1.45;
+}
+
+/* About Us - Departamente Card Section */
+.about-depts {
+  padding: 36px 0 44px;
+}
+
+.about-depts__container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+@media (max-width: 900px) {
+  .about-pillars__container,
+  .about-depts__container {
+    padding: 0 18px;
+  }
+
+  .about-pillars__container {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-card--elevated {
+    transform: none;
+  }
+}

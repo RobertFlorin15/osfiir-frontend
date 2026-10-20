@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import OsfiirLogo from './OsfiirLogo';
+import OsfiirLogo from '../OsfiirLogo/OsfiirLogo';
+import './Navbar.scss';
 
 const NAV_ITEMS = [
   {

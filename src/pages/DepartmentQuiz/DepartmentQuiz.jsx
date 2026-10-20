@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { RotateCcw, Sparkles } from 'lucide-react';
-import MessageSection from '../components/MessageSection';
-import { HOME_DEPARTMENTS } from '../data/demoData';
+import MessageSection from '../../components/MessageSection/MessageSection';
+import { HOME_DEPARTMENTS } from '../../utils/demoData';
+import './DepartmentQuiz.scss';
 
 const QUIZ_QUESTIONS = [
   {
@@ -36,7 +37,7 @@ const QUIZ_QUESTIONS = [
   },
 ];
 
-export default function DepartmentQuizPage() {
+export default function DepartmentQuiz() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState([]);
 

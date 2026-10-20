@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './MessageSection.scss';
 
 export default function MessageSection({
   topLine = 'DO YOU HAVE',

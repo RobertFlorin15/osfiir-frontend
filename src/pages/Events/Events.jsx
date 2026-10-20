@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Calendar, MapPin } from 'lucide-react';
-import MessageSection from '../components/MessageSection';
-import { DEMO_EVENTS } from '../data/demoData';
+import MessageSection from '../../components/MessageSection/MessageSection';
+import { DEMO_EVENTS } from '../../utils/demoData';
+import './Events.scss';
 
 const CATEGORIES = ['Toate', 'Social', 'Tehnic', 'Carieră', 'Sport & Gaming', 'Educațional', 'Caritabil'];
 
-export default function EventsPage() {
+export default function Events() {
   const [activeCategory, setActiveCategory] = useState('Toate');
 
   const filteredEvents =

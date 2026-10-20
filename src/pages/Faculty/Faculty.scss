@@ -1,0 +1,40 @@
+/* ==========================================================================
+   FACULTY PAGE (/despre-facultate)
+   ========================================================================== */
+.demo-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.demo-feature-card {
+  background: #ffffff;
+  border: 2.5px solid var(--osfiir-blue);
+  border-radius: 22px;
+  padding: 28px 22px;
+  text-align: center;
+}
+
+.demo-feature-card__icon {
+  margin-bottom: 14px;
+  display: inline-flex;
+}
+
+.demo-feature-card__title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #2E3138;
+  margin-bottom: 10px;
+}
+
+.demo-feature-card__text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #5E6168;
+}
+
+@media (max-width: 900px) {
+  .demo-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

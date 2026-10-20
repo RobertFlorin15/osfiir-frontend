@@ -1,0 +1,282 @@
+/* ==========================================================================
+   APP SHELL & SHARED UTILITIES
+   ========================================================================== */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--osfiir-white);
+  overflow-x: hidden;
+}
+
+.app-main {
+  flex: 1;
+}
+
+/* Shared Green Pill Button */
+.btn-green-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--osfiir-green);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 13px 34px;
+  border-radius: 999px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-green-pill:hover {
+  background-color: #1D863B;
+  transform: translateY(-2px);
+}
+
+/* Shared Placeholder Image */
+.home-about__card-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #E2E8F0 0%, #CBD5E1 100%);
+  position: relative;
+}
+
+.home-about__card-placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.35), transparent 70%);
+}
+
+/* Shared Reflected Heading ("DEPARTAMENTE", "DOMENII DE STUDIU") */
+.reflected-heading {
+  text-align: center;
+  margin-bottom: 36px;
+  user-select: none;
+  padding: 0 12px;
+}
+
+.reflected-heading__main {
+  font-size: clamp(2.4rem, 5.6vw, 4.3rem);
+  font-weight: 900;
+  color: var(--osfiir-blue);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+
+.reflected-heading__mirror {
+  font-size: clamp(2.4rem, 5.6vw, 4.3rem);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--osfiir-blue);
+  transform: scaleY(-0.58);
+  transform-origin: top center;
+  margin-top: 2px;
+  opacity: 0.26;
+  overflow-wrap: break-word;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, transparent 82%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, transparent 82%);
+  pointer-events: none;
+}
+
+/* Shared About Hero & Subpage Hero Layout */
+.about-hero {
+  padding: 46px 0 40px;
+}
+
+.about-hero__container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.about-hero__title {
+  text-align: center;
+  font-size: clamp(3rem, 7.5vw, 5.8rem);
+  font-weight: 900;
+  color: var(--osfiir-orange);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-bottom: 42px;
+  text-transform: uppercase;
+}
+
+.about-hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.about-hero__subtitle {
+  font-size: 1.55rem;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--osfiir-green);
+  margin-bottom: 18px;
+}
+
+.about-hero__paragraph {
+  font-size: 0.95rem;
+  line-height: 1.52;
+  color: #55585E;
+  text-align: justify;
+}
+
+.about-hero__image-col {
+  display: flex;
+  justify-content: center;
+}
+
+.about-hero__photo-frame {
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 3 / 3.6;
+  border-radius: 28px;
+  border: 2.5px solid var(--osfiir-blue);
+  overflow: hidden;
+}
+
+.about-hero__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.subpage-hero {
+  padding: 46px 0 24px;
+  text-align: center;
+}
+
+.subpage-hero__container,
+.subpage-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.subpage-hero__lead {
+  max-width: 680px;
+  margin: -18px auto 24px;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: #5E6168;
+}
+
+.subpage-section {
+  padding: 28px 0 48px;
+}
+
+/* Shared Form Styles (LaundryRequest & Contact) */
+.form-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 28px;
+  border: 2.5px solid var(--osfiir-blue);
+  padding: 38px 42px;
+}
+
+.osfiir-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.osfiir-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.osfiir-form__field label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #3B3F46;
+}
+
+.osfiir-form__field input,
+.osfiir-form__field select,
+.osfiir-form__field textarea {
+  font-family: inherit;
+  font-size: 0.92rem;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1.8px solid #CBD5E1;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.osfiir-form__field input:focus,
+.osfiir-form__field select:focus,
+.osfiir-form__field textarea:focus {
+  border-color: var(--osfiir-blue);
+}
+
+.osfiir-form__submit {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-success {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 0;
+}
+
+@media (max-width: 900px) {
+  .reflected-heading {
+    margin-bottom: 24px;
+  }
+
+  .reflected-heading__main,
+  .reflected-heading__mirror {
+    font-size: clamp(1.7rem, 7.6vw, 2.75rem);
+    letter-spacing: 0.03em;
+  }
+
+  .about-hero {
+    padding: 32px 0 28px;
+  }
+
+  .about-hero__container,
+  .subpage-hero__container,
+  .subpage-container {
+    padding: 0 18px;
+  }
+
+  .about-hero__title {
+    font-size: clamp(1.85rem, 8.6vw, 3.3rem);
+    line-height: 1.06;
+    margin-bottom: 24px;
+    overflow-wrap: break-word;
+  }
+
+  .subpage-hero {
+    padding: 32px 0 16px;
+  }
+
+  .subpage-hero__lead {
+    margin: -6px auto 18px;
+    font-size: 0.92rem;
+  }
+
+  .about-hero__grid,
+  .osfiir-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card {
+    padding: 24px 18px;
+    border-radius: 22px;
+  }
+}

@@ -1,0 +1,255 @@
+.site-footer {
+  background-color: var(--osfiir-dark);
+  color: #ffffff;
+  padding: 48px 0 28px;
+  position: relative;
+
+  &__scroll-top {
+    position: absolute;
+    right: 26px;
+    bottom: 22px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--osfiir-blue-nav);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    z-index: 10;
+
+    &:hover {
+      transform: translateY(-3px);
+      background-color: var(--osfiir-orange);
+    }
+  }
+
+  &__container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1.2fr;
+    align-items: center;
+    gap: 36px;
+    padding-bottom: 32px;
+  }
+
+  &__brand {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #EAEAEA;
+  }
+
+  &__icon-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #2F2F2F;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__about {
+    text-align: center;
+  }
+
+  &__about-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+  &__about-text {
+    font-size: 0.76rem;
+    line-height: 1.45;
+    color: #B8B8B8;
+    text-align: justify;
+    text-align-last: left;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-right: 54px;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+
+    a:hover {
+      color: var(--osfiir-orange);
+    }
+  }
+
+  &__sep {
+    opacity: 0.6;
+  }
+
+  &__copy {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--osfiir-orange);
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__socials-label {
+    display: none;
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: #CCCCCC;
+    letter-spacing: 0.04em;
+  }
+
+  &__social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__social-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #2F2F2F;
+    color: #CFCFCF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background-color: var(--osfiir-orange);
+      color: #ffffff;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .site-footer {
+    padding: 36px 0 22px;
+
+    &__scroll-top {
+      top: -21px;
+      bottom: auto;
+      right: 20px;
+    }
+
+    &__container {
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      align-items: center;
+      row-gap: 22px;
+      column-gap: 10px;
+    }
+
+    &__grid,
+    &__bottom,
+    &__bottom-left {
+      display: contents;
+    }
+
+    &__brand {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      justify-content: center;
+
+      .osfiir-logo--lg .osfiir-logo__img {
+        height: 76px;
+      }
+    }
+
+    &__contact {
+      grid-column: 1;
+      grid-row: 2;
+      gap: 10px;
+    }
+
+    &__contact-item {
+      font-size: 0.68rem;
+      gap: 8px;
+      text-align: left;
+    }
+
+    &__icon-circle {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__about {
+      display: none;
+    }
+
+    &__socials {
+      grid-column: 2;
+      grid-row: 2;
+      justify-self: center;
+      align-self: center;
+      gap: 8px;
+    }
+
+    &__socials-label {
+      display: block;
+      font-size: 0.56rem;
+      text-align: center;
+    }
+
+    &__social-icons {
+      gap: 8px;
+    }
+
+    &__social-btn {
+      width: 26px;
+      height: 26px;
+    }
+
+    &__links {
+      display: none;
+    }
+
+    &__copy {
+      grid-column: 1 / -1;
+      grid-row: 3;
+      text-align: center;
+      margin-top: 2px;
+    }
+  }
+}
